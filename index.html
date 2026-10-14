@@ -1,9 +1,306 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venus Boutique</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Georgia', serif;
+        }
+
+        body {
+            background: #fff9fb;
+            color: #444;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #d63384 0%, #b0266e 100%);
+            color: white;
+            padding: 20px 5%;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            letter-spacing: 3px;
+        }
+
+        header p {
+            font-style: italic;
+            opacity: 0.9;
+        }
+
+        nav {
+            background: white;
+            padding: 15px 5%;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+        }
+
+        nav a {
+            color: #b0266e;
+            text-decoration: none;
+            margin: 0 18px;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #d63384;
+            text-decoration: underline;
+        }
+
+        .hero {
+            background: url('https://images.unsplash.com/photo-1558171813-4c088753af8f?w=1200') center/cover no-repeat;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.4);
+        }
+
+        .hero-text {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h2 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 35px;
+            background: #d63384;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            margin-top: 10px;
+            transition: 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #b0266e;
+            transform: translateY(-2px);
+        }
+
+        .section {
+            padding: 60px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section h2 {
+            text-align: center;
+            font-size: 2rem;
+            color: #b0266e;
+            margin-bottom: 40px;
+        }
+
+        .about-box {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+            transition: 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+        }
+
+        .product-img {
+            height: 250px;
+            background: #fce4ec;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+
+        .product-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .product-info h3 {
+            color: #b0266e;
+            margin-bottom: 8px;
+        }
+
+        .price {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #d63384;
+            margin-bottom: 12px;
+        }
+
+        .buy-btn {
+            padding: 8px 22px;
+            background: #b0266e;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+
+        .buy-btn:hover {
+            background: #d63384;
+        }
+
+        .contact-box {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-box p {
+            margin: 12px 0;
+            font-size: 1.05rem;
+        }
+
+        footer {
+            background: #2b0d1a;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            font-size: 0.95rem;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to My Website!</h1>
+
+    <!-- Header -->
+    <header>
+        <h1>✿ VENUS BOUTIQUE ✿</h1>
+        <p>Where Elegance Meets Style</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-text">
+            <h2>Discover Your Beauty</h2>
+            <p>Curated fashion pieces just for you</p>
+            <a href="#products" class="btn">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <h2>About Us</h2>
+        <div class="about-box">
+            <p>Welcome to <strong>Venus Boutique</strong> — your destination for beautiful, timeless fashion. We believe that every person deserves to feel confident and stunning. Our collection is carefully selected to bring out the best in you. ✨</p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="section" id="products">
+        <h2>Our Collection</h2>
+        <div class="products-grid">
+            
+            <div class="product-card">
+                <div class="product-img">👗</div>
+                <div class="product-info">
+                    <h3>Elegant Dress</h3>
+                    <p>Perfect for special occasions</p>
+                    <div class="price">₱899</div>
+                    <button class="buy-btn">View Details</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img">👠</div>
+                <div class="product-info">
+                    <h3>Classic Heels</h3>
+                    <p>Comfort meets style</p>
+                    <div class="price">₱1,250</div>
+                    <button class="buy-btn">View Details</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img">👜</div>
+                <div class="product-info">
+                    <h3>Luxury Handbag</h3>
+                    <p>Complete your look</p>
+                    <div class="price">₱1,599</div>
+                    <button class="buy-btn">View Details</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img">💎</div>
+                <div class="product-info">
+                    <h3>Jewelry Set</h3>
+                    <p>Shine bright always</p>
+                    <div class="price">₱750</div>
+                    <button class="buy-btn">View Details</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <h2>Get In Touch</h2>
+        <div class="contact-box">
+            <p><strong>📍 Location:</strong> San Ildefonso, Bulacan, Philippines</p>
+            <p><strong>📱 Phone:</strong> +63 9XX XXX XXXX</p>
+            <p><strong>✉️ Email:</strong> hello@venusboutique.com</p>
+            <p><strong>⏰ Hours:</strong> Mon - Sat: 8:00 AM - 6:00 PM</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>✿ Venus Boutique © 2026 | All Rights Reserved ✿</p>
+    </footer>
+
 </body>
 </html>
